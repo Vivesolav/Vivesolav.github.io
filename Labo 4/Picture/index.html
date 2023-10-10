@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="nl" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>The picture element</h1>
+
+<p>Resize the browser window to load different images.</p>
+<img src="images/346790332_6502939663077445_541825176624932270_n.jpg" alt="flower" />
+<picture>
+  <source media="(min-width:650px)" srcset="images/346790332_6502939663077445_541825176624932270_n.jpg">
+  <source media="(min-width:365px)" srcset="images/349030467_6707821742582663_2729221296454047856_n.jpg">
+  <img src="images/345733233_5907122629410290_926669661158611635_n.jpg" alt="Flowers"/>
+</picture>
+
+<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture?retiredLocale=nl -->
+</body>
+</html>
