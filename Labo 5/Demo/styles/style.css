@@ -1,0 +1,27 @@
+h1,h2{
+    color:lime;
+}
+section>spam> h1{
+    color :green;
+}
+/*
+h2{
+
+    color: lime;
+}
+ */
+/* Class */
+.styleBlue{
+    color:blue;
+    font-size: 4em;
+}
+
+/* ID */
+#opmaak{
+    color:yellow;
+}
+
+.styleGreen{
+    color:Green;
+    font-size: 4em;
+}
