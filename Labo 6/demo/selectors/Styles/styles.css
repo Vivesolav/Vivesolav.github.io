@@ -1,0 +1,29 @@
+body{
+    background-color: yellow;
+}
+h1{
+    font-size: 4em;
+    background-color: red;
+}
+p{
+    background-color: lightblue;
+}
+p:first-letter{
+    font-size: 5em;
+    color: red;
+}
+/*p:first-line{
+    text-decoration: underline;
+}*/
+
+/*pseudo-class selector*/
+a:link{
+    text-decoration: none;
+}
+
+ul a:hover{
+ text-decoration: underline;
+}
+li:nth-child(2n+1){
+    color: blue;
+}
