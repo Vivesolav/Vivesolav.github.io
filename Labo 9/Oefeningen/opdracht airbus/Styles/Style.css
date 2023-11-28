@@ -35,6 +35,68 @@ body{
 }
 #news h1{
     color: white;
+    text-align:center;
     background-color: blue;
     font-size: 120%;
 }
+
+#news p {
+    padding: 0px 10px;
+}
+.gallery {
+    background-color: #999999;
+    padding : 10px 0px 10px 10px;
+}
+
+
+.introduction {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 90%;
+    background: url(../images/airbus_logo.jpg) no-repeat top left;
+    padding : 0px 30px 20px 170px;
+    text-align:justify;
+}
+
+
+.introduction span {
+    font-style:italic;
+    color: blue;
+    font-weight:bold;
+}
+
+
+.fotokader {
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px;
+    background-color:white;
+    border: 1px dashed #999999;
+}
+
+
+.fotokader>img {
+    padding: 10px 0px 0px 10px;
+}
+.block {
+    display:inline-block;
+    margin-left: 120px;
+    margin-bottom:0px;
+    line-height: 2em;
+}
+.block a {
+    color: white;
+}
+.block a:hover {
+    color: red;
+}
+.bottom {
+    clear : both;
+    background-color: #666666;
+    color:white;
+}
+.copyright p{
+    text-align:center;
+}
+
