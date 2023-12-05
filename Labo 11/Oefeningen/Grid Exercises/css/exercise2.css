@@ -1,0 +1,12 @@
+.container {
+    background-color: cornflowerblue;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolommen van gelijke breedte */
+    grid-template-rows: repeat(3, auto); /* 3 rijen met automatische hoogte */
+}
+
+.container .block {
+    margin: 50px;
+    padding: 50px;
+    background-color: white;
+}
