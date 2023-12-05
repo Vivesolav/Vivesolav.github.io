@@ -41,6 +41,8 @@
     background-color: rgb(242, 224, 122);
 }
 
-.row{
-    min-height: 50px;
+body {
+    padding: 0;
+    width: 95%;
+    margin:auto;
 }
