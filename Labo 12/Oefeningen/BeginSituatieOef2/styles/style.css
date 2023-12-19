@@ -1,0 +1,73 @@
+html {
+    background-color: #333;
+    font-family: helvetica;
+}
+
+* {
+    padding: 10px;
+}
+nav {}
+header,
+footer {
+    text-align: center;
+    background: #ddaa00;
+    color: white;
+}
+main {
+    background-color: grey;
+}
+
+body, section {
+    background-color: white;
+    margin: 5px;
+}
+img {
+    background-color: #ccc;
+    padding: 0;
+}
+h1 {
+    margin: 0;
+}
+nav {
+    padding: 5px 2px;
+    background-color: #ccc;
+    display :flex;
+}
+nav a {
+    margin: 0 5px;
+    background-color: white;
+    color: #ddaa00;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #333;
+    flex-grow: 1;
+}
+
+section > a {
+    background: #fff;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #666;
+    font-size: 1em;
+    text-align: center;
+    display:inline-block;
+    box-sizing: border-box;
+    width:100%;
+}
+footer {
+    border-top: 10px solid black;
+}
+
+@media screen and (min-width: 701px) {
+    /* Use Flexbox to align images next to each other */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    img {
+        flex: 0 0 calc(33.33% - 20px); /* 20px accounts for padding and margin */
+        margin-bottom: 10px; /* Add some spacing between rows of images */
+    }
+}
