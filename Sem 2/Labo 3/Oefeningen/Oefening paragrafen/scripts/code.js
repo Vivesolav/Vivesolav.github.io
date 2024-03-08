@@ -1,6 +1,5 @@
 const setup = () => {
 
-    window.addEventListener("load", setup);
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -10,3 +9,5 @@ document.addEventListener("DOMContentLoaded", function() {
         element.classList.add("opvallend");
     });
 });
+
+window.addEventListener("load", setup);

@@ -5,8 +5,6 @@ const setup = () => {
 	let sliderGreen = document.getElementById("sliderGreen");
 	let sliderBlue = document.getElementById("sliderBlue");
 
-	// we moeten zowel op het input als het change event reageren,
-	// zie http://stackoverflow.com/questions/18544890
 	sliderRed.addEventListener("change", update);
 	sliderRed.addEventListener("input", update);
 	sliderGreen.addEventListener("change", update);
@@ -14,7 +12,6 @@ const setup = () => {
 	sliderBlue.addEventListener("change", update);
 	sliderBlue.addEventListener("input", update);
 
-	// maak het blokje rood
 
 }
 
@@ -36,12 +33,4 @@ const update = () => {
 	blue.textContent = "Blue " + valueBlue;
 }
 
-
-
-// dit is de eerste regel code die uitgevoerd wordt,
-// de bovenstaande functie declaraties introduceren
-// enkel de functies en voeren ze niet uit natuurlijk.
-//
-// Onderstaande zorgt ervoor dat de setup functie wordt
-// uitgevoerd zodra de DOM-tree klaar is.
 window.addEventListener("load", setup);
