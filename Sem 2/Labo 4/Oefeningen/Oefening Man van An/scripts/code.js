@@ -1,9 +1,9 @@
 const setup = () => {
     let btnZoek = document.getElementById("btnZoek");
-    btnZoek.addEventListener("click",setup);
+    btnZoek.addEventListener("click",change);
 }
 
-const setup = () => {
+const change = () => {
     let txtInput =document.getElementById("txtInput");
     let tekst =txtInput.value;
     let txtZoektekst =document.getElementById("txtZoektekst");
