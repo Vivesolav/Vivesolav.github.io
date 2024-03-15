@@ -5,6 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+    <form>
+        <label for="chkSmoking" >Is roker </label>
+        <input type="checkbox" name="chkSmoking" id="chkSmoking" value="s"><br>
+
+        <label>Moedertaal </label>
+        <input type="radio" name="taal" id="rdbNederlands" value="m">
+        <label for="rdbNederlands">Nederlands</label>
+        <input type="radio" name="taal" id="rdbFrans" value="f">
+        <label for="rdbFrans">Frans</label>
+        <input type="radio" name="taal" id="rdbEngels" value="f">
+        <label for="rdbEngels">Engels</label><br>
+
+        <label for="favBuurland">Favoriete buurland:</label>
+        <select id="favBuurland" name="favBuurland">
+            <option value="Nederland">Nederland</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Duitsland">Duitsland</option>
+        </select>
+        <br><br>
+
+        <label for="bestelling">Bestelling:</label>
+        <select id="bestelling" name="bestelling" multiple>
+            <option value="aardappelen">Aardappelen</option>
+            <option value="brood">Brood</option>
+            <option value="melk">Melk</option>
+            <option value="biefstuk">Biefstuk</option>
+            <option value="chips">Chips</option>
+            <option value="krant">Krant</option>
+        </select>
+    </form>
 
 <script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
 <footer>
