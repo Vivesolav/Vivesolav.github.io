@@ -1,18 +1,19 @@
 const setup = () => {
-    let txtInput = document.querySelector("#txtInput");
-    txtInput.addEventListener("click", countAn);
+    document.getElementById("btnBereken").addEventListener("click",bereken)
 }
 
-const countAn = () => {
-    let text = "De man van An geeft geen hand aan ambetante verwanten";
-    let anPositie = 0;
-    let aantalAn = 0;
-    while (anPositie > -1) {
-        anPositie = text.indexOf("an");
-        text = text.substring((anPositie+2), text.length)
-        aantalAn ++;
+const bereken = () => {
+    let text = document.getElementById("txtInput").value;
+    let zoek =document.getElementById("txtZoektekst").value;
+    let positie = 0;
+    let aantal = 0;
+    text.toLowerCase();
+    while (positie > -1) {
+        positie = text.indexOf(zoek);
+        text = text.substring((positie+2), text.length)
+        aantal ++;
     }
-    console.log(aantalAn);
+    console.log(aantal);
 }
 
 window.addEventListener('load', setup);
