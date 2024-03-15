@@ -1,27 +1,18 @@
 const setup = () => {
-    let btnZoek = document.getElementById("btnZoek");
-    btnZoek.addEventListener("click",change);
+    let txtInput = document.querySelector("#txtInput");
+    txtInput.addEventListener("click", countAn);
 }
 
-const change = () => {
-    let txtInput =document.getElementById("txtInput");
-    let tekst =txtInput.value;
-    let txtZoektekst =document.getElementById("txtZoektekst");
-    let zoektekst=txtZoektekst.value;
-
-    let aantal=-1;
-
-    let txtAantal=telVoorkomens(tekst,zoektekst);
-    txtAantal.textContent=aantal;
-}
-
-const  telVoorkomens =(tekst,zoektekst)=>{
-    let result =0;
-    let idx=tekst.indexOf(zoektekst);
-    while(idx!==-1){
-        result++;
-        idx=tekst.indexOf(zoektekst,idx+zoektekst.length)
+const countAn = () => {
+    let text = "De man van An geeft geen hand aan ambetante verwanten";
+    let anPositie = 0;
+    let aantalAn = 0;
+    while (anPositie > -1) {
+        anPositie = text.indexOf("an");
+        text = text.substring((anPositie+2), text.length)
+        aantalAn ++;
     }
-    return result;
+    console.log(aantalAn);
 }
-window.addEventListener("load", setup);
+
+window.addEventListener('load', setup);
