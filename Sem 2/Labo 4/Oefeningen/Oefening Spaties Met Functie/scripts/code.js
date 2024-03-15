@@ -1,16 +1,17 @@
 const setup = () => {
-    let btnKnop=document.getElementById("btnKnop");
-    btnKnop.addEventListener("click",change);
-}
-const change =() =>{
-    let txtInput=document.getElementById("txtInput");
-    let tekst =txtInput.value;
-    let tekstMetSpaties="";
+    document.getElementById("btnKnop").addEventListener("click", spaties);
 
-    for(let i=0;i<tekst.length;i++){
-        tekstMetSpaties+=tekst.charAt(i) ;
-        tekstMetSpaties+=" ";
+}
+const spaties = () => {
+    let text = document.getElementById("txtInput").value;
+    console.log(maakMetSpaties(text));
+}
+
+const maakMetSpaties = (text) => {
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+        result += text[i] + " ";
     }
-    console.log(tekstMetSpaties)
+    return result;
 }
 window.addEventListener("load", setup);
