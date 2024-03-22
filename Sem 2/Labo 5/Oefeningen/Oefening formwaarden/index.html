@@ -2,19 +2,19 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Oefening formwaarden</title>
 </head>
 <body>
     <form>
         <label for="chkSmoking" >Is roker </label>
-        <input type="checkbox" name="chkSmoking" id="chkSmoking" value="s"><br>
+        <input class="tab" type="checkbox" name="chkSmoking" id="chkSmoking" value="s"><br>
 
         <label>Moedertaal </label>
-        <input type="radio" name="taal" id="rdbNederlands" value="m">
+        <input type="radio" name="taal" id="rdbNederlands" value="nl" checked>
         <label for="rdbNederlands">Nederlands</label>
-        <input type="radio" name="taal" id="rdbFrans" value="f">
+        <input type="radio" name="taal" id="rdbFrans" value="fr">
         <label for="rdbFrans">Frans</label>
-        <input type="radio" name="taal" id="rdbEngels" value="f">
+        <input type="radio" name="taal" id="rdbEngels" value="en">
         <label for="rdbEngels">Engels</label><br>
 
         <label for="favBuurland">Favoriete buurland:</label>
@@ -25,7 +25,7 @@
         </select>
         <br><br>
 
-        <label for="bestelling">Bestelling:</label>
+        <label for="bestelling">Bestelling</label>
         <select id="bestelling" name="bestelling" multiple>
             <option value="aardappelen">Aardappelen</option>
             <option value="brood">Brood</option>
@@ -33,8 +33,12 @@
             <option value="biefstuk">Biefstuk</option>
             <option value="chips">Chips</option>
             <option value="krant">Krant</option>
-        </select>
+        </select><br>
+
+        <input type="button" name="btnResultaat" id="btnResultaat" value="Toon resultaat">
     </form>
+
+
 
 <script type="text/javascript" charset="utf-8" src="scripts/code.js"></script>
 <footer>
