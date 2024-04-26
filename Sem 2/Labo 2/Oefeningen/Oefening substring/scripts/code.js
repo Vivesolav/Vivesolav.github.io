@@ -13,7 +13,7 @@ const uitvoeren = () => {
         sub = "Ongeldige invoer voor getallen.";
     }
 
-    document.getElementById("txtOutput").innerHTML = sub; // Gebruik '=' in plaats van '()'
+    document.getElementById("txtOutput").innerHTML = sub;
     console.log(sub);
 }
 
