@@ -1,19 +1,20 @@
-
 const setup = () => {
-    btnKnop.addEventListener("click", klikken);
+    document.getElementById("btnKnop").addEventListener("click", uitvoeren);
 }
+const uitvoeren = () => {
+    let woord = document.getElementById("txtWoord").value;
+    let getal1 = parseInt(document.getElementById("txtGetal1").value);
+    let getal2 = parseInt(document.getElementById("txtGetal2").value);
+    let sub;
 
-const klikken = () => {
-    let txtLinks = document.getElementById("txtLinks");
-    let txtMidden = document.getElementById("txtMidden");
-    let txtRechts = document.getElementById("txtRechts");
-    let tekst = txtLinks.value;
-    let nummer1 = txtMidden.value;
-    let nummer2 = txtRechts.value;
-    if(tekst === "appelboom" && nummer1 === "2" && nummer2 === "5"){
-        let txtOutput = document.getElementById("txtOutput");
-        txtOutput.innerHTML= "pel";
+    if (!isNaN(getal1) && !isNaN(getal2)) {
+        sub = woord.substring(getal1, getal2);
+    } else {
+        sub = "Ongeldige invoer voor getallen.";
     }
+
+    document.getElementById("txtOutput").innerHTML = sub; // Gebruik '=' in plaats van '()'
+    console.log(sub);
 }
 
 window.addEventListener("load", setup);
