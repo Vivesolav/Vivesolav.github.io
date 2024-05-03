@@ -16,5 +16,4 @@ const uitvoeren = () => {
     document.getElementById("txtOutput").innerHTML = sub;
     console.log(sub);
 }
-
 window.addEventListener("load", setup);
