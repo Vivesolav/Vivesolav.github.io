@@ -1,57 +1,61 @@
-const storeSliderValues = (red, green, blue) => {
-    let settings = {};
-    let settingsColorJSON;
+const storeSliderValues = () => {
+    let rgb = {};
+    let settingsJSON;
 
-    settings.red = parseInt(document.getElementById("sldRed").value);
-    settings.green = parseInt(document.getElementById("sldGreen").value);
-    settings.blue = parseInt(document.getElementById("sldBlue").value);
+    rgb.red = parseInt(document.getElementById("sldRed").value);
+    rgb.green = parseInt(document.getElementById("sldGreen").value);
+    rgb.blue = parseInt(document.getElementById("sldBlue").value);
 
-    settingsColorJSON = JSON.stringify(settings);
-    localStorage.setItem("colorPicker_Pro.be.settingsSliders", settingsColorJSON);
+    // bewaar settings als JSON string in local storage
+    settingsJSON = JSON.stringify(rgb);
+    localStorage.setItem("color-settings", settingsJSON);
 };
 
 const restoreSliderValues = () => {
-    let settings;
-    let settingsColorJSON = localStorage.getItem("colorPicker_Pro.be.settingsSliders");
+    let rgb;
+    let settingsJSON = localStorage.getItem("color-settings");
 
-    if (settingsColorJSON == undefined) {
-        settings = {
-            red: 0,
-            green: 0,
-            blue: 0
+    if (settingsJSON === undefined) {
+        rgb = {
+            red: 128,
+            green: 255,
+            blue: 128
         };
     } else {
-        settings = JSON.parse(settingsColorJSON);
+        rgb = JSON.parse(settingsJSON);
     }
 
-    document.getElementById("sldRed").value = settings.red;
-    document.getElementById("sldGreen").value = settings.green;
-    document.getElementById("sldBlue").value = settings.blue;
+    // vul de invoervelden met de settings-waarden
+    document.getElementById("sldRed").value = rgb.red;
+    document.getElementById("sldGreen").value = rgb.green;
+    document.getElementById("sldBlue").value = rgb.blue;
 };
 
-const storeSwatches = (red, green, blue) => {
-    let rgbColors =[];
-    let settingsSwatch = document.getElementById("swatch");
-
-    for(let i =1;i<settingsSwatch.length;i++){
+const storeSwatches = () => {
+    // bouw een array met kleurinfo objecten
+    let settings = [];
+    let settingsJSON;
+    let swatches = document.getElementsByClassName(" swatch");
+    for(let i =1; i < swatches.length; i++){
         let rgb = {
-            red: settingsSwatch[i].getAttribute("data-red"),
-            green: settingsSwatch[i].getAttribute("data-green"),
-            blue: settingsSwatch[i].getAttribute("data-blue")
+            red: swatches[i].getAttribute("data-red"),
+            green: swatches[i].getAttribute("data-green"),
+            blue : swatches[i].getAttribute("data-blue")
         };
-        rgbColors.push(rgb);
+        settings.push(rgb)
     }
-    let settingsSwatchJSON = JSON.stringify(rgbColors);
-    localStorage.setItem("colorPicker_Pro.be.settingsSwatches", settingsSwatchJSON);
+    // bewaar settings als JSON string in local storage
+    settingsJSON = JSON.stringify(settings);
+    localStorage.setItem("swatches", settingsJSON);
 };
 
 const restoreSwatches = () => {
-    let settingsSwatchJSON = localStorage.getItem("colorPicker_Pro.be.settingsSwatches");
 
-    if (settingsSwatchJSON != null) {
-        let rgbColors  = JSON.parse(settingsSwatchJSON);
-        for (let i = 0; i < rgbColors.length; i++) {
-            let rgb = rgbColors[i]
+    let settingsJSON = localStorage.getItem("swatches");
+    if(settingsJSON != null){
+        let settings = JSON.parse(settingsJSON);
+        for(let i = 0;i < settings.length; i++){
+            let rgb = settings[i];
             addSwatchComponent(rgb.red, rgb.green, rgb.blue);
         }
     }

@@ -34,6 +34,6 @@ const buildSwatchComponent = (red, green, blue) => {
         // voeg de swatch en button toe aan de swatchcomponent
         swatch.appendChild(btnDelete);
         return swatch;
-    };
+};
 
 
