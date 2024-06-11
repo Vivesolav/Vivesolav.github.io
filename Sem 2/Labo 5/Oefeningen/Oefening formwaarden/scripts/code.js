@@ -1,5 +1,5 @@
 const setup = () => {
-    document.getElementById("btnResultaat").addEventListener("click",resultaat)
+    document.getElementById("btnResultaat").addEventListener("click",resultaat);
 }
 const resultaat =()  =>{
     let roker = document.querySelector("#chkSmoking").checked;
